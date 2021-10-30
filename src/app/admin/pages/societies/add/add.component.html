@@ -1,0 +1,377 @@
+<div class="container" id="societies">
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title bg_dblue">Add New Society</h3>
+
+                </div>
+                <div class="card-body">
+                    <!-- form  -->
+                    <form [formGroup]="societyForm" (ngSubmit)="onnewSocietyForm()" enctype="multipart/form-data">
+
+                        <div class="form-row">
+                            <div class="col-md-12  mb-3">
+                                <label for="name">Society Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter name" value="" required formControlName="name" [ngClass]="{
+                                        'is-invalid': submitted && f.name.errors && f.name.touched,
+                                        'is-valid': f.name.touched && f.name.valid 
+                                    }">
+                                <div *ngIf="f.name.touched && f.name.invalid" class="invalid-feedback">
+                                    <div *ngIf="f.name.errors?.required">
+                                        Name is Required !
+                                    </div>
+                                    <!-- <div *ngIf="f.name.errors?.minlength">
+                                        Name is Required !
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="col-md-3 mb-3">
+                                <label for="city">City</label>
+                                <select class="form-control select form-select" id="city" required formControlName="city" [ngClass]="{
+                                        'is-invalid': submitted && f.city.errors && f.city.touched,
+                                        'is-valid': f.city.touched && f.city.valid 
+                                    }">
+                                    <option value="">Select City</option>
+                                    <option value="Abhayapuri">Abhayapuri</option>
+                                    <option value="Abhayapuri">Abhayapuri</option>
+                                    <option value="Achhnera">Achhnera</option>
+                                    <option value="Adalaj">Adalaj</option>
+                                    <option value="Adari">Adari</option>
+                                </select>
+                                <div *ngIf="f.city.touched && f.city.invalid" class="invalid-feedback">
+                                    <div *ngIf="f.city.errors?.required">
+                                        City is Required !
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                                <label for="state">State</label>
+                                <select class="form-control select form-select" id="state" required formControlName="state" [ngClass]="{
+                                        'is-invalid': submitted && f.state.errors && f.state.touched,
+                                        'is-valid': f.state.touched && f.state.valid 
+                                        }">
+                                    <option value="">Select State</option>
+                                    <option value="Abhayapuri">Abhayapuri</option>
+                                    <option value="Abhayapuri">Abhayapuri</option>
+                                    <option value="Achhnera">Achhnera</option>
+                                    <option value="Adalaj">Adalaj</option>
+                                    <option value="Adari">Adari</option>
+                                </select>
+
+                                <div *ngIf="f.state.touched && f.state.invalid" class="invalid-feedback">
+                                    <div *ngIf="f.state.errors?.required">
+                                        State is Required !
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                                <label for="area">Area</label>
+                                <input type="text" id="area" class="form-control" required placeholder="Area" formControlName="area" [ngClass]="{
+                                        'is-invalid': submitted && f.area.errors && f.area.touched,
+                                        'is-valid': f.area.touched && f.area.valid 
+                                        }">
+
+                                <div *ngIf="f.area.touched && f.area.invalid" class="invalid-feedback">
+                                    <div *ngIf="f.area.errors?.required">
+                                        Area is Required !
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                                <label for="pincode">Pincode</label>
+                                <input type="text" id="pincode" class="form-control" required placeholder="Pincode" formControlName="pincode" [ngClass]="{
+                                        'is-invalid': submitted && f.pincode.errors && f.pincode.touched,
+                                        'is-valid': f.pincode.touched && f.pincode.valid 
+                                        }">
+                                <div *ngIf="f.pincode.touched && f.pincode.invalid" class="invalid-feedback">
+                                    <div *ngIf="f.pincode.errors?.required">
+                                        Pincode is Required !
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <div class="col-sm-12 col-md-12">
+                                <textarea class="form-control" id="address" rows="2" required formControlName="address" [ngClass]="{
+                                                'is-invalid': submitted && f.address.errors && f.address.touched,
+                                                'is-valid': f.address.touched && f.address.valid 
+                                          }">
+                                </textarea>
+                                <div *ngIf="f.address.touched && f.address.invalid" class="invalid-feedback">
+                                    <div *ngIf="f.address.errors?.required">
+                                        Address is Required !
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-row ">
+
+                            <div class="col-md-3 mb-3">
+                                <label for="email">Email</label>
+                                <input type="text" id="Email" class="form-control" required placeholder="Email" formControlName="email" [ngClass]="{
+                                        'is-invalid': submitted && f.email.errors && f.email.touched,
+                                        'is-valid': f.email.touched && f.email.valid 
+                                        }">
+
+                                <div *ngIf="f.email.touched && f.email.invalid" class="invalid-feedback">
+                                    <div *ngIf="f.email.errors?.required">
+                                        email is Required !
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="text" id="phoneNumber" class="form-control" required placeholder="Phone No" formControlName="phone_number" [ngClass]="{
+                                        'is-invalid': submitted && f.phone_number.errors && f.phone_number.touched,
+                                        'is-valid': f.phone_number.touched && f.phone_number.valid 
+                                        }">
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                                <label for="RegistrationNumber">Registration Number</label>
+                                <input type="text" id="RegistrationNumber" class="form-control" required placeholder="Registration Number" formControlName="registration_no" [ngClass]="{
+                                        'is-invalid': submitted && f.registration_no.errors && f.registration_no.touched,
+                                        'is-valid': f.registration_no.touched && f.registration_no.valid 
+                                        }">
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                                <label for="gstin">GSTIN</label>
+                                <input type="text" id="gstin" class="form-control" required placeholder="GSTIN" formControlName="gstin" [ngClass]="{
+                                        'is-invalid': submitted && f.gstin.errors && f.gstin.touched,
+                                        'is-valid': f.gstin.touched && f.gstin.valid 
+                                       }">
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group row">
+                            <div class="col-sm-12 col-md-7 me-3">
+                                <input class="me-3" name="is_gst" type="checkbox" value="1" id="gst">
+                                <label for="gst">Is GST Applicable</label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="col-md-6 mb-3">
+                                <label for="OpeningBalance">opening balance</label>
+                                <input type="text" id="OpeningBalance" class="form-control" required placeholder="Opening Balance" formControlName="openingbalance" [ngClass]="{
+                                        'is-invalid': submitted && f.openingbalance.errors && f.openingbalance.touched,
+                                        'is-valid': f.openingbalance.touched && f.openingbalance.valid 
+                                        }">
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="NumberofFlats">Number of Flats</label>
+                                <input type="text" id="NumberofFlats" class="form-control" required placeholder="Number of Flats" formControlName="noofflats" [ngClass]="{
+                                        'is-invalid': submitted && f.noofflats.errors && f.noofflats.touched,
+                                        'is-valid': f.noofflats.touched && f.noofflats.valid 
+                                        }">
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-group row ">
+                            <div class="col-sm-12 col-md-7 me-3">
+                                <input class="me-3" name="AutoGenerateBill" type="checkbox" value="1" id="AutoGenerateBill">
+                                <label for="AutoGenerateBill">Auto Generate Bill</label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-3 mb-3">
+                                <label for="BillDay">Bill Day</label>
+                                <input type="text" id="BillDay" class="form-control" required placeholder="Bill Day" formControlName="billday" [ngClass]="{
+                                        'is-invalid': submitted && f.billday.errors && f.billday.touched,
+                                        'is-valid': f.billday.touched && f.billday.valid 
+                                        }">
+
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="DueDay">Due Day</label>
+                                <input type="text" id="DueDay" class="form-control" required placeholder="Due Day" formControlName="dueday" [ngClass]="{
+                                        'is-invalid': submitted && f.dueday.errors && f.dueday.touched,
+                                        'is-valid': f.dueday.touched && f.dueday.valid 
+                                         }">
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                                <label for="Interest_Type">Interest Type</label>
+                                <select class="form-control select form-select" name="InterestType" id="Interest_Type" required formControlName="InterestType" [ngClass]="{
+                                        'is-invalid': submitted && f.InterestType.errors && f.InterestType.touched,
+                                        'is-valid': f.InterestType.touched && f.InterestType.valid 
+                                        }">
+                                    <option value="">Select Interest Type</option>
+                                    <option value="Simple Interest">Simple Interest</option>
+                                    <option value="Compound Interest">Compound Interest</option>
+                                    <option value="Fixed Penalty">Fixed Penalty</option>
+
+                                </select>
+                            </div>
+
+                            <div class="col-md-3 mb-3">
+                                <label for="Interest_Span">Interest Span</label>
+                                <select class="form-control select form-select" name="InterestType" id="Interest_Span" required formControlName="InterestSpan" [ngClass]="{
+                                        'is-invalid': submitted && f.InterestSpan.errors && f.InterestSpan.touched,
+                                        'is-valid': f.InterestSpan.touched && f.InterestSpan.valid 
+                                    }">
+                                    <option value="">Select Interest Span</option>
+                                    <option value="Daily">Daily</option>
+                                    <option value="Monthly">Monthly</option>
+                                    <option value="Quarterly">Quarterly</option>
+                                    <option value="Half Yearly">Half Yearly</option>
+                                    <option value="Yearly">Yearly</option>
+
+                                </select>
+                            </div>
+
+
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-12 col-md-7 me-3">
+                                <input class="me-3" name="InterestonBillFrequency" type="checkbox" value="1" id="InterestonBillFrequency">
+                                <label for="gst">Interest
+                                    on Bill Frequency</label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="col-md-12 mb-3">
+                                <label for="InterestRate">Interest Rate</label>
+                                <input type="text" id="InterestRate" class="form-control" required placeholder="Interest Rate" formControlName="Interest_Rate" [ngClass]="{
+                                        'is-invalid': submitted && f.Interest_Rate.errors && f.Interest_Rate.touched,
+                                        'is-valid': f.Interest_Rate.touched && f.Interest_Rate.valid 
+                                       }">
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <h5>Other Charges</h5>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-12 mb-3">
+                                <label for="NocCharge">Noc Charge</label>
+                                <input type="text" id="NocCharge" class="form-control" required placeholder="Noc Charge" formControlName="Noc_Charge" [ngClass]="{
+                                        'is-invalid': submitted && f.Noc_Charge.errors && f.Noc_Charge.touched,
+                                        'is-valid': f.Noc_Charge.touched && f.Noc_Charge.valid 
+                                        }">
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row ">
+                            <div class="col-sm-12 col-md-7 me-3">
+                                <input class="me-3" name="AutoGenerateBill" type="checkbox" value="1" id="AutoGenerateBill">
+                                <label for="AutoGenerateBill">Noc
+                                    Unit Value</label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-12 mb-3">
+                                <label for="customFile">Image</label>
+                                <input type="file" name="image" class="mb-1 form-control" id="customFile" formControlName="image" [ngClass]="{
+                                        'is-invalid': submitted && f.image.errors && f.image.touched,
+                                        'is-valid': f.image.touched && f.image.valid 
+                                        }">
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <div class="col-sm-12 col-md-7 me-3">
+                                <label for="inlineCheckbox2">Select
+                                    Operation Mode</label>
+                            </div>
+                            <div class="col-sm-12 col-md-12">
+
+                                <div class="form-check form-check-inline">
+                                    <input type="checkbox" name="allNonTrades" checked [value]="nontrade" (change)="allNonTrades($event)">
+                                    <label class="btn btn-filter me-3 form-check-label">
+                                        Full Mode
+                                      </label>
+
+                                    <ng-container *ngFor="let ntrd of nontrade">
+                                        <input type="checkbox" name="nontrades" [checked]="ntrd.selected" (change)="changeTradesByCategory($event)">
+                                        <label class="btn btn-filter form-check-label">
+                                        {{ ntrd.label }}
+                                      </label>&nbsp;
+                                    </ng-container>
+
+                                    <!-- <div class="form-check form-check-inline">
+
+                                        <input class="form-check-input" name="bill_payment" type="checkbox"
+                                            id="inlineCheckbox2" value="1">
+    
+                                        <label class="form-check-label" for="inlineCheckbox2">Bill &amp; Payments</label>
+    
+                                    </div> -->
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="invalidCheck33" required>
+                                <label class="custom-control-label" for="invalidCheck33">Agree to terms and
+                                    conditions</label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div> -->
+                        <hr>
+                        <div class="form-group">
+                            <button class="btn btn-primary" [disabled]="!societyForm.valid">Submit</button>
+                            <button class="btn btn-secondary float-end">Reset</button>
+                        </div>
+
+
+
+                    </form>
+                    <!-- /form  -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

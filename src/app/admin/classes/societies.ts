@@ -1,0 +1,44 @@
+export class Societies {
+    id: number;
+    name: string;
+    address: string;
+    registration_no: string;
+    gstin: string;
+    is_gst: string;
+    no_of_flats: string;
+    email: string;
+    phone_number: string;
+    secret_key: string;
+    created_at: string;
+    updated_at: string;
+    opening_balance: string;
+    image_file_name: string;
+    interest_type: string;
+    interest_span: string;
+    interest_rate: string;
+    bill_day: string;
+    due_day: string;
+    auto_create_bill: string;
+    noc_charge: string;
+    noc_unit_value: string;
+    garden_charge: string;
+    garden_unit_value: string;
+    terrace_charge: string;
+    terrace_unit_value: string;
+    villa_charge: string;
+    villa_unit_value: string;
+    duplex_charge: string;
+    duplex_unit_value: string;
+    commercial_charge: string;
+    commercial_unit_value: string;
+    garage_charge: string;
+    garage_unit_value: string;
+    warehouse_charge: string;
+    warehouse_unit_value: string;
+    full_mode: string;
+    bill_payments: string;
+    accounting: string;
+    gatekeeper: string;
+    vms:string;
+
+}

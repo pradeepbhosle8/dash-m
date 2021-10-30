@@ -1,0 +1,66 @@
+<div id="useAdd">
+    <div class="container">
+
+      
+          <div class="card p-3">
+                <div class="card-header">
+                <h3 class="card-title bg_dblue">Society Executives</h3>
+                <button type="button" class="btn btn-primary btn-sm float-end" routerLink="addUser" >Add User</button>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+            
+                        <div class="table-responsive">
+  <table id="dataTables-usersocietyExec" class=" table table-hover table-sm table-bordered text-ceneter">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Groups</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of useSocieti">
+      <td>{{ item.first_name }}</td>
+      <td>{{ item.last_name }}</td>
+      <td>{{ item.email }}</td>
+      <td>
+        <a href="" class="btn btn-outline-info btn-sm" data-bs-toggle="tooltip" data-bs-placement="right" title="operator">
+        <img src="../../../../../assets/images/icons/operator.svg" style="width: 20px;" alt=""> </a>
+      </td>
+      <td><span class="badge" [ngClass]="{
+        'badge-success ': item.status === 'active',
+        'badge-warning': item.status === 'inactive'
+      }">{{item.status}}</span> </td>
+      <td>
+        <button type="button" class="btn btn-sm btn-success me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit"><i class="fas fa-edit"></i></button>
+        <button type="button" class="btn btn-sm btn-danger me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Assign Society"><i class="fas fa-exchange-alt"></i></button>
+          <!-- <button class="btn btn-info btn-sm" >Assign Society</button> -->
+      </td>
+    </tr>
+  </tbody>
+    <!-- <tfoot>
+      <tr>
+        <th>ID</th>
+        <th>Societies</th>
+        <th>Registration No</th>
+        <th>No of Flats</th>
+        <th></th>
+      </tr>
+  </tfoot> -->
+</table>
+</div>
+        
+                        <!-- /.card -->
+                    </div>
+                </div>
+
+              </div>
+        
+    </div>
+    </div>
+</div>

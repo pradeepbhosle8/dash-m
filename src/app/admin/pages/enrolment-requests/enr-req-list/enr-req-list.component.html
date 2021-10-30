@@ -1,0 +1,64 @@
+<div id="societyEnrollment">
+    <div class="container">
+
+    
+
+          <div class="card p-3">
+
+            
+            
+            <div class="card-header">
+                <h3 class="card-title bg_dblue">Enrollment </h3>
+                <!-- <button type="button" class="btn btn-primary btn-sm float-end" routerLink="add" >Add State</button> -->
+              </div>
+              <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                      <div class="table-responsive">                 
+  <table id="dataTables-enrollmentrequests" class="table table-hover table-sm table-bordered text-ceneter">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Role</th>
+      <th>Society Name</th>
+      <th>Society Address</th>
+      <th>City</th>
+      <th>Joining Span</th>
+      <th>No of Units</th>
+      <th>Reference</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of enrollmentrequests">
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.phone}}</td>
+      <td>{{item.role}}</td>
+      <td>{{item.societyName}}</td>
+      <td>{{item.societyAddress}}</td>
+      <td>{{item.city}}</td>
+      <td>{{item.joiningSpan}}</td>
+      <td>{{item.noofUnits}}</td>
+      <td>{{item.reference}}</td>
+     
+     
+    </tr>
+  </tbody>
+ 
+</table>
+</div>
+        
+                        <!-- /.card -->
+                    </div>
+                </div>
+
+              </div>
+        
+    </div>
+    </div>
+</div>

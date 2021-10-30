@@ -1,0 +1,195 @@
+body {
+    overflow-x: hidden;
+    // font-family: 'Montserrat', sans-serif !important;
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.brand-link .brand-image {
+    max-height: 30px;
+}
+
+.layout-navbar-fixed {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1037;
+}
+
+.h30 {
+    height: 30px;
+}
+
+.hight30 {
+    height: 30px !important;
+    min-height: 70px !important;
+}
+
+.bg_dblue {
+    color: #150969;
+}
+
+.bg_greylight {
+    background-color: #e6e6e6!important;
+}
+
+.text-sm {
+    font-size: .875rem!important;
+}
+
+.fw400 {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.content-wrapper {
+    margin-top: calc(3.5rem + 1px);
+}
+
+.pull-up {
+    transition: all .25s ease;
+    &:hover {
+        -webkit-transform: translateY(-4px) scale(1.02);
+        -moz-transform: translateY(-4px) scale(1.02);
+        -ms-transform: translateY(-4px) scale(1.02);
+        -o-transform: translateY(-4px) scale(1.02);
+        transform: translateY(-4px) scale(1.02);
+        -webkit-box-shadow: 0 5px 10px rgb(62 57 107 / 20%);
+        box-shadow: 0 5px 10px rgb(62 57 107 / 20%);
+        z-index: 999;
+    }
+}
+
+.border-btm {
+    border-bottom: 1px solid #dee2e6;
+}
+
+// icons 16x16
+.link_icons {
+    width: 20px;
+    height: 20px;
+    fill: rgba(233, 236, 239, .21);
+    font-size: 1rem !important;
+}
+
+.link_icons_dash {
+    width: 40px;
+    height: 40px;
+    fill: rgba(233, 236, 239, .21);
+    font-size: 1rem !important;
+}
+
+.nav-header {
+    font-size: 0.75rem !important;
+}
+
+.brandCaptialW {
+    color: #000865;
+    // #6571ff
+}
+
+.brand-text {
+    color: #6571ff;
+}
+
+.main-wrapper {
+    .page-wrapper {
+        background-color: #F6F6F6;
+    }
+}
+
+#topspoker {
+    .progress-bar {
+        background-color: #191919;
+    }
+}
+
+#maintanceSectio {
+    .widget-user {
+        .widget-user-image {
+            img {
+                height: 100px !important;
+                width: 100px !important;
+            }
+        }
+        .description-header {
+            font-size: 1rem;
+        }
+        .description-text {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.form-control {
+    font-size: 0.8rem !important;
+    font-weight: 400;
+}
+
+.col-form-label {
+    color: #000865 !important;
+}
+
+table {
+    font-size: 0.8rem;
+}
+
+table.dataTable tbody td,
+table.dataTable thead th {
+    padding: 2px 10px;
+    text-align: center;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #fdfdfd !important;
+    border: 1px solid #6571ff;
+    background-color: white;
+    background: linear-gradient(to bottom, #6571ff 0%, #6571ff 100%);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: #221f1f !important;
+    border: 1px solid #cfd2ff;
+    background-color: #585858;
+    background: linear-gradient(to bottom, #cfd2ff 0%, #cfd2ff 100%);
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border: 1px solid #6571ff;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    border: 1px solid #6571ff;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0.4rem 0.8rem !important;
+}
+
+.badge {
+    padding: 0.35rem .65rem;
+}
+
+.card {
+    label {
+        font-size: 0.8rem;
+        font-weight: normal !important;
+    }
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border-color: red
+}
+
+.invalid-feedback {
+    display: block;
+}
+
+// progrss bar css

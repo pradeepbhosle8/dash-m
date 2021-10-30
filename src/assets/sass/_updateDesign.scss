@@ -1,0 +1,36 @@
+[class*=sidebar-light-] {
+    background-color: #f79834;
+}
+
+.brand-text {
+    color: #fff;
+}
+
+[class*=sidebar-light-] .sidebar a {
+    color: #000;
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active,
+.sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: #fff;
+    color: #000;
+}
+
+[class*=sidebar-light] .brand-link {
+    border-bottom: none;
+}
+
+.main-header {
+    border-bottom: none;
+    z-index: 1034;
+}
+
+.content-wrapper {
+    background-color: #f9e8d7b3;
+    border-radius: 20px;
+    border: 5px solid #efe3d7;
+}
+
+.main-footer {
+    border: none;
+}
