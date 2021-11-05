@@ -15,10 +15,11 @@ import { ChartsModule } from 'ng2-charts';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { TableModule } from 'primeng/table';
 import {MultiSelectModule} from 'primeng/multiselect';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -33,7 +34,9 @@ import {MultiSelectModule} from 'primeng/multiselect';
     ChartsModule,
     TableModule,
     MultiSelectModule,
-    NgCircleProgressModule.forRoot({}) 
+    NgCircleProgressModule.forRoot({}),
+    Ng2SearchPipeModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

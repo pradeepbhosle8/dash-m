@@ -1,39 +1,7 @@
 <div id="societies">
     <div class="container-fluid">
 
-        <div class="card">
-            <div class="card-header">
 
-                <form>
-                    <div class="form-group">
-                        <!-- <label for="customFile">Custom File</label> -->
-                        <div class="h30"><span class="text-info p-2 mb-2">Import Societies Only CSV format is allowed!</span> <a href="#" class="text-primary">Help ?</a>
-                        </div>
-                        <div class="custom-file">
-
-                            <input type="file" class="custom-file-input" id="customFile">
-                            <label class="custom-file-label" for="customFile">Import Societies</label>
-
-
-                        </div>
-
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-primary">Submit</button>
-                    </div>
-                </form>
-
-
-            </div>
-            <div class="card-footer ">
-                <div class="float-end">
-                    <span class="me-3">Download sample format file by clicking link below.</span>
-                    <button class="btn btn-info float-end" style="display: none;">Download XLS</button>
-                    <a href="https://testing.paynet.co.in/msociety/assets/uploads/sample_society.csv" class="btn btn-info btn-sm">Download CSV</a>
-                </div>
-
-            </div>
-        </div>
 
         <div class="card p-3">
 
@@ -53,7 +21,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-2">
-                    <div class="info-box bg-light bg_dblue text-center p-0 m-0 hight30">
+                    <div class="info-box bg-light bg_dblue text-center border p-0 m-0 hight30">
                         <div class="info-box-content">
                             <span class="info-box-text">Total Flats</span>
                             <span class="info-box-number fs-4">
@@ -74,7 +42,48 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-12">
-                        <div class="table-responsive">
+                        <div class="table-responsive custom-table-responsive">
+                            <div class="form-group">
+                                <input type="text" class="form-control w-25 float-end" placeholder="Search..." [(ngModel)]="filterTerm">
+                            </div>
+                            <table class="table custom-table table-sm">
+                                <thead>
+                                    <tr>
+
+                                        <th>ID</th>
+                                        <th>Societies</th>
+                                        <th>Registration No</th>
+                                        <th>No of Flats</th>
+
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody *ngFor="let item of Societies | filter:filterTerm | paginate: { itemsPerPage:5, currentPage: p }">
+                                    <tr>
+
+                                        <td>{{ item.id }}</td>
+                                        <td> <a href="#!" class="text-primary" (click)="onDetails(item)">{{ item.name }}</a></td>
+                                        <td>{{ item.registration_no }}</td>
+                                        <td>{{item.no_of_flats}}</td>
+
+                                        <td>
+                                            <button class="badge bg-info border-0" (click)="onDetails(item)">Details</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="spacer">
+                                        <td colspan="100"></td>
+                                    </tr>
+
+
+
+
+
+                                </tbody>
+                            </table>
+                            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                        </div>
+                        <!-- <div class="table-responsive">
 
                             <table id="dataTables-society" class="table table-hover table-sm text-ceneter table-bordered ">
                                 <thead>
@@ -83,7 +92,7 @@
                                         <th>Societies</th>
                                         <th>Registration No</th>
                                         <th>No of Flats</th>
-                                        <!-- <th>Opening Balance</th> -->
+                                      
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -93,24 +102,16 @@
                                         <td>{{ item.name }}</td>
                                         <td>{{ item.registration_no }}</td>
                                         <td>{{item.no_of_flats}}</td>
-                                        <!-- <td>{{item.Opening_Balance}}</td> -->
+                                      
                                         <td>
                                             <button class="btn btn-info btn-sm" (click)="onDetails(item)">Details</button>
                                         </td>
                                     </tr>
 
                                 </tbody>
-                                <!-- <tfoot>
-      <tr>
-        <th>ID</th>
-        <th>Societies</th>
-        <th>Registration No</th>
-        <th>No of Flats</th>
-        <th></th>
-      </tr>
-  </tfoot> -->
+                               
                             </table>
-                        </div>
+                        </div> -->
 
                         <!-- /.card -->
                     </div>
@@ -122,47 +123,13 @@
 
         <!-- <div class="card">
             <div class="card-body">
-                <div class="table-responsive custom-table-responsive">
-                    <table class="table custom-table">
-                        <thead>
-                            <tr>
-                              
-                                <th>ID</th>
-                                <th>Societies</th>
-                                <th>Registration No</th>
-                                <th>No of Flats</th>
-                                
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody *ngFor="let item of Societies">
-                            <tr>
-                               
-                                <td>{{ item.id }}</td>
-                                <td> <a href="">{{ item.name }}</a></td>
-                                <td>{{ item.registration_no }}</td>
-                                <td>{{item.no_of_flats}}</td>
-                                
-                                <td>
-                                    <button class="badge bg-info border-0" (click)="onDetails(item)">Details</button>
-                                </td>
-                            </tr>
 
-                            <tr class="spacer">
-                                <td colspan="100"></td>
-                            </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                </div>
             </div>
         </div> -->
+
+
         <!-- *ngFor="let item of Societies" -->
-        <div class="card">
+        <!-- <div class="card">
             <p-table [value]="Societies">
                 <ng-template pTemplate="header">
                     <tr>
@@ -173,14 +140,15 @@
                 </ng-template>
                 <ng-template pTemplate="body" let-flight>
                     <tr>
-                        <td>{{flight.flightNumber}}</td>
-                        <td>{{flight.origin}}</td>
-                        <td>{{flight.destination}}</td>
+                        <td>{{ Societies.id }}</td>
+                        <td>{{ Societies.name }}</td>
+                        <td>{{ Societies.registration_no }}</td>
+                        <td>{{Societies.no_of_flats}}</td>
                     </tr>
                 </ng-template>
             </p-table>
 
-        </div>
+        </div> -->
 
     </div>
 </div>

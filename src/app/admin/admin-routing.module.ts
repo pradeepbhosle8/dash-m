@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 import { AuthGuard } from './helper/auth.guard';
 import { ActivityLogsComponent } from './pages/activity-logs/activity-logs.component';
 import { ChartjsComponent } from './pages/chartjs/chartjs.component';
@@ -12,6 +13,7 @@ import { EnrReqListComponent } from './pages/enrolment-requests/enr-req-list/enr
 import { EnrolmentRequestsComponent } from './pages/enrolment-requests/enrolment-requests.component';
 import { ExcaListComponent } from './pages/expense-categories/exca-list/exca-list.component';
 import { ExpenseCategoriesComponent } from './pages/expense-categories/expense-categories.component';
+import { MasterComponent } from './pages/master/master.component';
 import { PagesComponent } from './pages/pages.component';
 import { RoleAddComponent } from './pages/roles/role-add/role-add.component';
 import { RoleEditComponent } from './pages/roles/role-edit/role-edit.component';
@@ -45,11 +47,18 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path:'enroll',
+    component: RegisterComponent
+  },
+  {
     path: '',
     component: PagesComponent,
     //canActivate: [AuthGuard],
     children: [
-     
+      {
+        path:'master',
+        component: MasterComponent
+      },
       
       {
         path:'dashboard',

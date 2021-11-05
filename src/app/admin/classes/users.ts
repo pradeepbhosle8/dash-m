@@ -1,8 +1,15 @@
 export class Users{
     id: number;
+    first_name: string;
+    last_name: string;
+    username: string;
     email: string;
-    password: string;
-    access_token: string;
+    phone: string;
+    dob: string;
+    gender: string;
+    token: string;
+  data: any;
+ 
     // id: number;
     // ip_address: number;
     // username: string;

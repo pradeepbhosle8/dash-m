@@ -20,11 +20,11 @@ export class PagesComponent implements OnInit {
     var token = localStorage.getItem('loggedInUser');
     // console.log(token)
     if(!token){
-          this.router.navigate(['/login'],{ relativeTo: this.route })  
+          // this.router.navigate(['/login'],{ relativeTo: this.route })  
           // console.log('token undefined');
     }else if(token){
       // console.log('token defined');
-      this.router.navigate(['/msociety/dashboard'],{ relativeTo: this.route })
+      // this.router.navigate(['/msociety/'],{ relativeTo: this.route })
     }
   }
 

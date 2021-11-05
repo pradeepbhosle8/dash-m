@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import {FormlyFieldConfig, FormlyFormOptions} from '@ngx-formly/core';
 
 @Component({
   selector: 'app-add',
@@ -12,6 +13,11 @@ export class AddComponent implements OnInit {
   submitted = false;
   isNonTrade: boolean = false
   checkAllNonTrades: boolean = false
+ 
+
+  
+
+ 
 
 
   constructor(
@@ -29,7 +35,7 @@ export class AddComponent implements OnInit {
       name: new FormControl('', Validators.required),
       city: new FormControl('', Validators.required),
       state: new FormControl('', Validators.required),
-      area: new FormControl('', Validators.required),
+      // area: new FormControl('', Validators.required),
       pincode: new FormControl('', Validators.required),
       address: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.email, Validators.required]),
@@ -38,13 +44,13 @@ export class AddComponent implements OnInit {
       gstin: new FormControl('', Validators.required),
       openingbalance: new FormControl('', Validators.required),
       noofflats: new FormControl('', Validators.required),
-      billday: new FormControl('', Validators.required),
-      dueday: new FormControl('', Validators.required),
-      InterestType: new FormControl('', Validators.required),
-      InterestSpan: new FormControl('', Validators.required),
-      Interest_Rate: new FormControl('', Validators.required),
-      Noc_Charge: new FormControl('', Validators.required),
-      image: new FormControl('', Validators.required)
+      // billday: new FormControl('', Validators.required),
+      // dueday: new FormControl('', Validators.required),
+      // InterestType: new FormControl('', Validators.required),
+      // InterestSpan: new FormControl('', Validators.required),
+      // Interest_Rate: new FormControl('', Validators.required),
+      // Noc_Charge: new FormControl('', Validators.required),
+      // image: new FormControl('', Validators.required)
       // bill_payment: new FormControl('', Validators.required),
       // accounting: new FormControl('', Validators.required),
       // gatekeeper: new FormControl('', Validators.required),

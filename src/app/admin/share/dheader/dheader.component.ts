@@ -11,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
 export class DheaderComponent implements OnInit {
   loggedUserSubject: any;
   currentDate = new Date();
+  username: any;
+  roles: any;
 
   constructor(
     private authservice: AuthserviceService,
@@ -18,7 +20,11 @@ export class DheaderComponent implements OnInit {
     private router: Router,
   ) { }
 
+
   ngOnInit(): void {
+    // this.username = this.authservice.loggedInUserValue.data.username;
+    // this.roles = this.authservice.loggedInUserValue.data.roles[0].slug;
+    
   }
 
   logOut(){

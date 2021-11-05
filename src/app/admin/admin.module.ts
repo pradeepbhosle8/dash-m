@@ -58,6 +58,9 @@ import { ChartsModule } from 'ng2-charts';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { TableModule } from 'primeng/table';
 import {MultiSelectModule} from 'primeng/multiselect';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { MasterComponent } from './pages/master/master.component';
 
 
 @NgModule({
@@ -99,7 +102,7 @@ import {MultiSelectModule} from 'primeng/multiselect';
                  CityAddComponent, 
                  CityEditComponent, 
                  EnrReqListComponent, 
-                 ChartjsComponent],
+                 ChartjsComponent, MasterComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
@@ -111,7 +114,9 @@ import {MultiSelectModule} from 'primeng/multiselect';
     TableModule,
     MultiSelectModule,
      ToastrModule.forRoot(),
-     NgCircleProgressModule.forRoot({}) 
+     NgCircleProgressModule.forRoot({}),
+     NgxPaginationModule,
+     Ng2SearchPipeModule,
     
      
   ],

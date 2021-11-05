@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   // apiUrl: 'http://127.0.0.1:8000/api/v3/'
   // apiUrl: 'http://localhost:8000/auth/login'
+  apiUrl: 'https://testing.paynet.co.in/msociety_lv/public/index.php/api/v3/auth/login'
 };
 
 /*

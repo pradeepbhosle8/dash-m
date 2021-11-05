@@ -13,7 +13,7 @@ const httpOptions = {
 })
 export class SocietiesService {
 
-  public baseUrl = 'http://localhost:8000/societies';
+  public baseUrl = 'http://localhost:3000/societies';
 
   constructor(
     private httpService: HttpClient

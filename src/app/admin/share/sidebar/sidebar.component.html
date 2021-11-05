@@ -49,6 +49,10 @@
             
           </li> -->
                 <li class="nav-item">
+                    <a routerLinkActive="active" class="nav-link" routerLink="./master">
+                        <i class="nav-icon feather-settings link_icons me-3"></i> MASTER</a>
+                </li>
+                <li class="nav-item">
                     <a [routerLink]="['./dashboard']" routerLinkActive="active" class="nav-link">
                         <!-- <i class="nav-icon fas fa-th"></i> -->
                         <i class="nav-icon feather-box link_icons me-3"></i>
@@ -58,14 +62,14 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-header text-muted">MASTERS</li>
+
                 <li class="nav-item">
                     <a [routerLink]="['./societies']" routerLinkActive="active" class="nav-link">
                         <!-- <i class="nav-icon fas fa-th"></i> -->
                         <i class="nav-icon feather-home link_icons me-3"></i>
                         <p>
                             Societies
-                            <span class="right badge badge-success">New</span>
+                            <!-- <span class="right badge badge-success">New</span> -->
                         </p>
                     </a>
                 </li>
@@ -154,13 +158,13 @@
 
                 </li>
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a [routerLink]="['./cahrtjs']" routerLinkActive="active" class="nav-link">
                         <i class="nav-icon feather-git-pull-request link_icons me-3"></i>
                         <p> Chartjs </p>
                     </a>
 
-                </li>
+                </li> -->
 
             </ul>
         </nav>

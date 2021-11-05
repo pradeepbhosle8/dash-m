@@ -10,34 +10,15 @@
                         </a>
                     </div>
                     <div class="wrap_login card p-4 shadow rounded ">
-
-
                         <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
-
-                            <!-- Email input -->
+                            <!-- username  -->
                             <div class="form-outline mb-4">
-                                <label class="form-label" for="Email">Email address
-                                </label>
-                                <input type="email" id="Email" class="form-control" placeholder="Email" formControlName="email" [ngClass]="{
-                                        'is-invalid': submitted && f.email.errors && f.email.touched,
-                                        'is-valid': f.email.touched && f.email.valid 
-                                    }" />
-                                <div *ngIf="f.email.touched && f.email.invalid" class="invalid-feedback">
-                                    <div *ngIf="f.email.errors?.required">
-                                        Please Enter Your Email!
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                            <!-- <div class="form-outline mb-4">
                                 <label class="form-label" for="username">Username
-                                </label>
+                            </label>
                                 <input type="text" id="username" class="form-control" placeholder="Username" formControlName="username" [ngClass]="{
-                                        'is-invalid': submitted && f.username.errors && f.username.touched,
-                                        'is-valid': f.username.touched && f.username.valid 
-                                    }" />
+                                    'is-invalid': submitted && f.username.errors && f.username.touched,
+                                    'is-valid': f.username.touched && f.username.valid 
+                                    }" autocomplete="off" />
                                 <div *ngIf="f.username.touched && f.username.invalid" class="invalid-feedback">
                                     <div *ngIf="f.username.errors?.required">
                                         Please Enter Your Username!
@@ -45,7 +26,8 @@
 
                                 </div>
 
-                            </div> -->
+                            </div>
+                            <!-- / username  -->
 
                             <!-- Password input -->
                             <div class="form-outline mb-4">
@@ -53,7 +35,7 @@
                                 <input type="password" id="password" class="form-control " formControlName="password" placeholder="Password" [ngClass]="{
                                         'is-invalid': submitted && f.password.errors && f.password.touched,
                                         'is-valid': f.password.touched && f.password.valid 
-                                    }" />
+                                    }" autocomplete="off" />
                                 <div *ngIf="f.password.touched && f.password.invalid" class="invalid-feedback">
                                     <div *ngIf="f.password.errors?.required">
                                         Please Enter Your Password!
@@ -62,15 +44,7 @@
                                 </div>
 
                             </div>
-
-                            <!-- <div class="d-flex justify-content-around align-items-center mb-4">
-                              
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-                                    <label class="form-check-label" for="form1Example3"> Remember me </label>
-                                </div>
-                                <a href="#!">Forgot password?</a>
-                            </div> -->
+                            <!-- / Password input -->
 
                             <!-- Submit button -->
                             <button type="submit" class="btn btn-primary  btn-block" [disabled]="!loginForm.valid">
@@ -89,16 +63,15 @@
                             <div class="mt-4 pt-1">
                                 <p class="mb-0 float-end">Don't have an account? <a href="#!" class="text-primary fw-bold">Sign Up</a></p>
                             </div>
-
                         </form>
-
                         <ul class="login-menu">
 
-                            <li class="blue-login"><a href="https://testing.paynet.co.in/msociety/auth/enroll">Enroll
+                            <li class="blue-login"><a routerLink="./enroll">Enroll
                                     Your Society</a></li>
                         </ul>
 
 
+                        {{loginForm.value| json}}
                     </div>
                 </div>
             </div>

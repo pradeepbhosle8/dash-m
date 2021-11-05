@@ -14,6 +14,8 @@ declare var $: any;
 export class ListComponent implements AfterViewInit, OnInit {
   dtOptions: DataTables.Settings = {};
   Societies: any = [];
+  p: number = 1;
+  filterTerm: string;
   
   constructor(
     private router: Router,
@@ -27,7 +29,7 @@ export class ListComponent implements AfterViewInit, OnInit {
     this.societiesService.getAllSocieties()
     .subscribe(
       (res) => {
-        // console.log(res)
+        console.log(res)
         this.Societies = res;
         setTimeout(()=>{
           $('#dataTables-society').DataTable({
@@ -54,9 +56,8 @@ export class ListComponent implements AfterViewInit, OnInit {
   }
 
   onDetails(item:any){
-    console.log(item.society_id);
-    alert(`Socierty id:  ${item.society_id}
-Society Name : ${item.name}`)
+    // console.log(item.society_id);
+    alert(`Socierty id:  ${item.id} Society Name : ${item.name}`)
   }
 
 }
